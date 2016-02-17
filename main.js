@@ -51,6 +51,15 @@ itsWood.forEach(function(elem){
 
 document.getElementById("answer4").innerHTML = woodStr;
 
+// ---------------------------------------------------------
+var listWood = items.filter(function(allElems) {
+  return allElems.materials.indexOf("wood") > -1;
+} ).map(function(justWoods) {
+  return justWoods.title;} );
+//checking all the indexes 0+ RETURNS truthy indexes
+//creates copy array from truthy returns with justWoods.title
+// ---------------------------------------------------------
+
 //ANSWER5
 var eightItems = items.filter(function(elem){
   return elem.materials.length >= 8;
